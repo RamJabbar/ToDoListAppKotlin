@@ -1,12 +1,13 @@
-package com.example.todolistapp
+package com.example.todolistapp.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.todolistapp.taskitem.TaskItem
+import com.example.todolistapp.interfacee.TaskItemDao
 
-
-@Database (entities = [TaskItem::class], version = 2    , exportSchema = false)
+@Database(entities = [TaskItem::class], version = 2    , exportSchema = false)
 abstract class TaskItemDatabase : RoomDatabase()
 {
     abstract fun taskItemDao(): TaskItemDao
@@ -37,4 +38,3 @@ abstract class TaskItemDatabase : RoomDatabase()
 
 
 }
-

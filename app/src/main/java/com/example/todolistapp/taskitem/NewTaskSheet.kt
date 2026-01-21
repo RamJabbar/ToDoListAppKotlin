@@ -1,14 +1,13 @@
-package com.example.todolistapp
+package com.example.todolistapp.taskitem
 
 import android.os.Bundle
 import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.example.todolistapp.databinding.FragmentNewTaskSheetBinding
 import androidx.lifecycle.ViewModelProvider
-
+import com.example.todolistapp.databinding.FragmentNewTaskSheetBinding
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class NewTaskSheet(var taskItem: TaskItem?) : BottomSheetDialogFragment()
 {
@@ -52,7 +51,7 @@ class NewTaskSheet(var taskItem: TaskItem?) : BottomSheetDialogFragment()
         val desc = binding.desc.text.toString()
         if(taskItem == null)
         {
-            val newTask = TaskItem(name, desc, completedDate = null )
+            val newTask = TaskItem(name, desc, completedDate = null)
             taskViewModel.addTaskItem(newTask)
             }
         else

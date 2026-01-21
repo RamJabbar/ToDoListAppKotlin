@@ -1,8 +1,10 @@
-package com.example.todolistapp
+package com.example.todolistapp.taskitem
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.todolistapp.R
+import java.time.LocalDate
 
 @Entity(tableName = "task_item_table")
 data class TaskItem(
@@ -29,7 +31,7 @@ data class TaskItem(
 
     fun completedDateString(): String {
         return completedDate?.let {
-            java.time.LocalDate.ofEpochDay(it).toString()
+            LocalDate.ofEpochDay(it).toString()
         } ?: ""
     }
 }

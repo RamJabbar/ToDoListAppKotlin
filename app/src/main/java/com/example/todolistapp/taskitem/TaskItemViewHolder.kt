@@ -1,8 +1,10 @@
-package com.example.todolistapp
+package com.example.todolistapp.taskitem
 
 import android.content.Context
 import androidx.recyclerview.widget.RecyclerView
+import com.example.todolistapp.R
 import com.example.todolistapp.databinding.TaskItemCellBinding
+import com.example.todolistapp.interfacee.TaskItemClickListener
 
 class TaskItemViewHolder(
     private val context: Context,

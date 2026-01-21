@@ -1,14 +1,11 @@
-package com.example.todolistapp
+package com.example.todolistapp.taskitem
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import java.time.LocalDate
-import java.util.UUID
 
 class TaskViewModel(private val repository: TaskItemRepository) : ViewModel() {
 
@@ -32,7 +29,7 @@ class TaskViewModel(private val repository: TaskItemRepository) : ViewModel() {
     fun setCompleted(taskItem: TaskItem) {
 
         taskItem.completedDate = if (taskItem.completedDate == null) {
-            java.time.LocalDate.now().toEpochDay()
+            LocalDate.now().toEpochDay()
         } else {
             null
         }

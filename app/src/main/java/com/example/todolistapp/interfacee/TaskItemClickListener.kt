@@ -1,4 +1,6 @@
-package com.example.todolistapp
+package com.example.todolistapp.interfacee
+
+import com.example.todolistapp.taskitem.TaskItem
 
 interface TaskItemClickListener
 {
@@ -6,5 +8,3 @@ interface TaskItemClickListener
     fun completeTaskItem(taskItem: TaskItem)
     fun deleteTaskItem(taskItem: TaskItem)
 }
-
-

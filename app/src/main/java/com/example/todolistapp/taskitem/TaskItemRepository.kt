@@ -1,6 +1,7 @@
-package com.example.todolistapp
+package com.example.todolistapp.taskitem
 
 import androidx.annotation.WorkerThread
+import com.example.todolistapp.interfacee.TaskItemDao
 import kotlinx.coroutines.flow.Flow
 
 class TaskItemRepository (private val taskItemDao: TaskItemDao)

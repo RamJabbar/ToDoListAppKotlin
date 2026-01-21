@@ -1,8 +1,11 @@
-package com.example.todolistapp
+package com.example.todolistapp.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.todolistapp.taskitem.TaskItem
+import com.example.todolistapp.interfacee.TaskItemClickListener
+import com.example.todolistapp.taskitem.TaskItemViewHolder
 import com.example.todolistapp.databinding.TaskItemCellBinding
 
 class TaskItemAdapter(
@@ -31,4 +34,3 @@ class TaskItemAdapter(
 
 
 }
-

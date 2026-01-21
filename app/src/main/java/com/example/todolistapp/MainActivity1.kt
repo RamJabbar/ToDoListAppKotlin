@@ -7,10 +7,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.todolistapp.databinding.ActivityMain1Binding
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.todolistapp.TaskViewModel
-import com.example.todolistapp.NewTaskSheet
+import com.example.todolistapp.taskitem.TaskViewModel
+import com.example.todolistapp.taskitem.NewTaskSheet
+import com.example.todolistapp.adapter.TaskItemAdapter
+import com.example.todolistapp.interfacee.TaskItemClickListener
+import com.example.todolistapp.taskitem.TaskItem
+import com.example.todolistapp.taskitem.TaskItemModelFactory
 
 class MainActivity1 : AppCompatActivity(), TaskItemClickListener
 {
